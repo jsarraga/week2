@@ -34,7 +34,7 @@ class ShoppingList:
 
     def add_to_list(self, name, healthy, price):
         food = Food(name, healthy, price)
-        self.shopping_list = shopping_list.append(food)
+        self.shopping_list.append(food)
 
     def view_list(self):
         print(self.shopping_list)
@@ -45,7 +45,10 @@ class ShoppingList:
 # justin.update_gpa(2.3)
 # print(justin.gpa)
 
-apple = Food('apple',True,1.0)
+apple = Food('apple',True, 1.0)
 print(apple.name, apple.healthy, apple.price)
-ShoppingList.add_to_list('apple', True, 1.0)
-print(ShoppingList.shopping_list)
+foodlist = ShoppingList()
+print(foodlist.shopping_list)
+foodlist.add_to_list('apple', True, 1.0)
+print(foodlist.view_list())
+# print(foodlist.shopping_list[0])
